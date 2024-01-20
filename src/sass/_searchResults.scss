@@ -12,12 +12,28 @@
 .pagination {
   margin-top: auto;
   padding: 0 3.5rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  &__btn--prev,
+  &__page-over-totalpages,
+  &__btn--next {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__btn--prev {
+    grid-column: 1;
+  }
 
   &__page-over-totalpages {
+    grid-column: 2;
     font-size: 1.3rem;
+  }
+
+  &__btn--next {
+    grid-column: 3;
   }
 }
 
